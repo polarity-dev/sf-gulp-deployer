@@ -1,0 +1,35 @@
+{
+  "name": "@soluzioni-futura/sf-gulp-deployer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoluzioniFutura/sf-gulp-deployer.git"
+  },
+  "keywords": [],
+  "author": "Soluzioni Futura",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SoluzioniFutura/sf-gulp-deployer/issues"
+  },
+  "homepage": "https://github.com/SoluzioniFutura/sf-gulp-deployer#readme",
+  "dependencies": {
+    "aws-sdk": "^2.308.0",
+    "gulp-help-doc": "^1.1.1",
+    "inquirer": "^6.2.0",
+    "mime-types": "^2.1.20",
+    "node-sass": "^4.9.3",
+    "shelljs": "^0.8.2"
+  },
+  "peerDependencies": {
+    "gulp": "3.x"
+  },
+  "devDependencies": {
+    "@soluzioni-futura/eslint-config-soluzioni-futura": "^1.0.1",
+    "eslint": "^5.5.0"
+  }
+}
