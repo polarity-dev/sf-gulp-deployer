@@ -72,7 +72,7 @@ module.exports = (gulp, { bucket, prefix, folder, envs }) => {
    * @order {20}
    */
   gulp.task("deploy", () => {
-    const pkg = require("./package.json")
+    const pkg = require(join(cwd, "package.json"))
     const { version: currentVersion } = pkg
     return inquirer.prompt([
       { type: "list", name: "action", message: `package.json version is ${currentVersion}. What do you want to do?`, choices: [
