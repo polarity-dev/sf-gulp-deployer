@@ -28,6 +28,7 @@ try {
 } catch(_) {
   credentials = {}
 }
+
 module.exports = (gulp, { bucket, prefix, folder, envs }) => {
   /**
    * Show commands help.
