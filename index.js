@@ -124,11 +124,12 @@ module.exports = (gulp, { bucket, prefix, folder, envs }) => {
             const files = dig(folder)
             return Promise.all(files.map(file => {
               const ContentType = mime.lookup(file) || "text/plain"
+              const [weakFileType, strongFileType] = ContentType.split("pdf")
               const buffer = fs.readFileSync(file)
               return s3.putObject({
                 Bucket: bucket,
                 Key: join(prefix(env), file.replace(`${folder}`, "")),
-                Body: ["image", "font"].includes(ContentType.split("/")[0]) ? buffer : buffer.toString(),
+                Body: ["image", "font"].includes(weakFileType) || ["pdf"].includes(strongFileType) ? buffer : buffer.toString(),
                 ContentType
               }).promise()
             }))
