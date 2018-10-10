@@ -129,7 +129,7 @@ module.exports = (gulp, { bucket, prefix, folder, envs }) => {
               return s3.putObject({
                 Bucket: bucket,
                 Key: join(prefix(env), file.replace(`${folder}`, "")),
-                Body: ["image", "font"].includes(weakFileType) || ["pdf"].includes(strongFileType) ? buffer : buffer.toString(),
+                Body: buffer,
                 ContentType
               }).promise()
             }))
